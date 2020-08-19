@@ -23,12 +23,10 @@ function getUserInfo() {
         //     Authorization: localStorage.getItem('token') || ''
         // },
         success: function (res) {
-            // console.log(res);
-            randerInfo(res.data);
-            if (res.statue !== 0) {
+            if (res.status !== 0) {
                 return layer.msg(res.message);
             }
-            
+            randerInfo(res.data);
         }
         // complete: function (res) {
         //     // console.log(res);
