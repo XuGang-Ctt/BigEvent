@@ -44,7 +44,6 @@ $(function () {
                 }
                 layer.msg('恭喜修改成功！');
                 window.parent.getUserInfo();
-
             }
         });
 

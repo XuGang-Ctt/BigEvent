@@ -41,4 +41,5 @@ a {
     line-height: 60px;
     text-align: center;
     width: 200px;
+    user-select: none;
 }

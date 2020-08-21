@@ -42,13 +42,16 @@ function getUserInfo() {
 function randerInfo(data) {
     //渲染用户名
     var name = data.nickname || data.username;
-    $('.welcome').html('欢迎　' + name);
-    //渲染头像
+    $('.welcome').html('欢迎　' + name); 
     var firstStr = name[0].toUpperCase();
+    //渲染头像
+    // console.log(data.user_pic);
     if (data.user_pic !== null) {
+        // console.log(11);
         $('.text-avatar').hide();
-        $('.layui-nav-img').show();
+        $('.layui-nav-img').attr('src',data.user_pic).show();
     } else {
+        // console.log(11);
         $('.text-avatar').html(firstStr).show();
         $('.layui-nav-img').hide();
     }
